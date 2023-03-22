@@ -1,0 +1,13 @@
+/* Mixing */
+
+@mixin mix($left, $right) {
+    margin-left: $left;
+    margin-right: $right;    
+}
+
+    body {
+        @include mix(10px, 10px);    
+    }
+    div {
+        @include mix(15px, 15px);
+  }

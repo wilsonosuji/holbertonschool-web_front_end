@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Login to the website</h1>
+
+    <form>
+      <input type="text" id="firstname" name="first name" />  
+      <input type="text" id="email" name="email" />  
+      <button type="button" onclick="setCookies()">Log me in</button>
+    </form>
+
+    <h1>Cookies</h1>
+    <button type="button" onclick="showCookies()">Show the cookies</button>
+    <script>
+      function setCookies() {
+        let FirstName = document.getElementById("firstname").value;
+        let Email = document.getElementById("email").value;
+        document.cookie = `firstname=${FirstName}; expires=Fr, 16 Oct 2013 00:00:00 UTC; path=/`;
+        document.cookie = `email=${Email}; expires=Fr, 16 Oct 2013 00:00:00 UTC; path=/`;
+      }
+      function showCookies() {
+        let parag = document.createElement("p");
+        parag.innerHTML = `Cookies: ${document.cookie}`;
+        document.body.append(parag);
+      }
+    </script>
+  </body>
+</html>

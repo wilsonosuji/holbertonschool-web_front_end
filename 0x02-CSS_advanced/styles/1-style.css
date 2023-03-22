@@ -1,0 +1,4 @@
+/* Fluid behavior of scroll in CSS */
+html {
+    scroll-behavior: smooth;
+}
